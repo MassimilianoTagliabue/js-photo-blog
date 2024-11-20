@@ -31,9 +31,6 @@ img{
 .img-overlay-ms{
 
     position: absolute;
-    background-color: aqua;
-    width: 300px;
-    height: 300px;
     
     left: 42%;
     top: 42%;

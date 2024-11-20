@@ -1,21 +1,25 @@
+const imgOverlayElem = document.querySelector(".img-overlay-ms");
 
-const takeAllCardElem = () => {
+const takeAllCardElem = (result,imgOverlay) => {
     const cardsElem = document.querySelectorAll(".card-ms");
+    
+    console.log(imgOverlay);
 
-    cardsElem.forEach((curItem) => {
+    cardsElem.forEach((curItem,index) => {
 
-        curItem.addEventListener("click", ()=>{
+        curItem.addEventListener("click", () => {
+            
             overlayElem.classList.remove("d-none");
             
+            imgOverlayElem.innerHTML = `<img src="${result[index].thumbnailUrl}" alt="" width="300px" heigth="300px" >` 
 
         })
-        console.log(curItem);
 
     });
 
+};
 
 
-}
 
 const generaCard = (text) => {
 
@@ -39,15 +43,8 @@ const generaCard = (text) => {
         })
 
         cardElem.innerHTML = text;
-        takeAllCardElem();
-
-
-
-
-    })
-
-
-
+        
+    });
 
 };
 
