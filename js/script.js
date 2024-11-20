@@ -1,33 +1,20 @@
 
-const cardElem = document.getElementById("card")
+const cardElem = document.getElementById("card");
+const btnOverlay = document.querySelector(".btn-close-ms");
+const overlayElem = document.querySelector(".overlay-ms");
+console.log(overlayElem.classList);
+
+console.log(btnOverlay);
+//overlayElem.classList.add("d-none");
 
 let text = "";
 
-
-axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6",{timeout:5000}).then((resp) =>{
-
-    
-    let result = resp.data;
-
-    
-    result.forEach( curItem => {
-
-        console.log(curItem);
-        
-        text += `<div class="card-ms col-4 mt-5">
-                    <img src="./img/pin.svg" alt="" class="pin-ms">
-                    <div class="square-ms">
-                        <img src="${curItem.thumbnailUrl}" alt="" width="300px" heigth="300px">
-                    </div>
-                    <p class="card-text-ms">${curItem.title} </p>
-                </div>`;
-
-              
-    })
-     
-    cardElem.innerHTML = text;
-    
-    
-})
+generaCard(text);
 
 
+
+
+btnOverlay.addEventListener("click", () =>{
+
+    overlayElem.classList.add("d-none");
+} )

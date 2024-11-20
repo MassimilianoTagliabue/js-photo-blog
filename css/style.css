@@ -9,10 +9,44 @@ img{
 }
 
 :root{
-    --height-square:300px;
+    --width-square:300px;
+    
 }
 
+.relative-ms{
 
+    position: relative;
+}
+
+ .overlay-ms{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    
+    
+}  
+
+.img-overlay-ms{
+
+    position: absolute;
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    
+    left: 42%;
+    top: 42%;
+    
+    
+} 
+
+.btn-close-ms{
+    position: absolute;
+    left: 49%;
+    top: 37%;
+    
+}
 /* header */
 h1{
 
@@ -24,7 +58,7 @@ h1{
 
 .wall-bg{
     background-image: url(../img/wall.png);
-    height: 20vh;
+    height: 15vh;
     width: 100%;
 
 }
@@ -34,15 +68,15 @@ h1{
 
 .cork-bg{
     background-image: url(../img/cork.png);
-    min-height: 80vh;
+    min-height: 85vh;
     width: 100%;
-    padding-top: 20px;
+    
 }
 
 .card-ms{
     background-color: white;
     width: 350px;
-    height: 420px;
+    height: 380px;
     padding: 0 10px;
 }
 
